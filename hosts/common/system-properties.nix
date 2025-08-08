@@ -11,6 +11,8 @@
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Warsaw";
+  
+  home-manager.backupFileExtension = "bak";
 
   services.pipewire = {
     enable = true;

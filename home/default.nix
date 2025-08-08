@@ -1,3 +1,6 @@
+#Home manager config
+#./home/default.nix
+
 { config, pkgs, ... }:
 
 {
@@ -6,5 +9,7 @@
 
   programs.home-manager.enable = true;
   home.stateVersion = "25.05";
+  
+  home.file.".config/hypr/hyprland.conf".source = ./configs/hyprland.conf;
 }
 
