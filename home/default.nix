@@ -15,6 +15,6 @@
   home.stateVersion = "25.05";
   
   home.file.".config/hypr".source = ./configs/hypr;
-  home.file.".config.waybar".source = ./configs/waybar;
+  home.file.".config/waybar".source = ./configs/waybar;
 }
 
