@@ -4,6 +4,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./nix-managed/zsh.nix
+  ];
+
   home.username = "tomus";
   home.homeDirectory = "/home/tomus";
 
