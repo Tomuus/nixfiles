@@ -21,7 +21,7 @@
 	home-manager.nixosModules.home-manager {
 	  home-manager.useGlobalPkgs = true;
 	  home-manager.useUserPackages = true;
-	  home-manager.users.tomus = import ./hosts/Latitude7310/home.nix;
+	  home-manager.users.tomus = import ./home;
 	}
       ];
     };
