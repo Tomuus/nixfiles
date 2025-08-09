@@ -18,6 +18,7 @@
       modules = [
         ./hosts/Latitude7310/configuration.nix
 	./modules/de/hyprland.nix
+	./modules/dev/cpp.nix
 	home-manager.nixosModules.home-manager {
 	  home-manager.useGlobalPkgs = true;
 	  home-manager.useUserPackages = true;
