@@ -18,10 +18,10 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in
   {
-    pankages.${system}.default = 
+    packages.${system}.default = 
       (nvf.lib.neovimConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
-	modules = [./home/nix-managed/nvf.nix];
+	modules = [ ./home/nix-managed/nvf.nix ];
       }).neovim;
     nixosConfigurations.Latitude7310 = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
@@ -35,6 +35,11 @@
 	  home-manager.useUserPackages = true;
 	  home-manager.users.tomus = import ./home;
 	}
+	{
+          environment.systemPackages = with pkgs; [
+            self.packages.${system}.default
+          ];
+        }
       ];
     };
   };
