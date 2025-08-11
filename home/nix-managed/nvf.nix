@@ -1,20 +1,35 @@
-{ pkgs, ... }
+{ pkgs, lib, ... }:
 
 {
   vim = {
     theme = {
       enable = true;
-      name = "gruvbox";
-      style = "dark";
+      name = "catppuccin";
+      style = "frappe";
     };
     
+    options = {
+      number = true;
+      relativenumber = false;
+    };
+    filetree = {
+     nvimTree = {
+        setupOpts = {
+          view = {
+            number = false;
+            relativenumber = false;
+          };
+        };
+      };
+    };
+                
     autocomplete.nvim-cmp.enable = true;
-
     languages = {
       enableLSP = true;
-      enableTreesitter = true;
-  
+
+      clang.enable = true;
       nix.enable = true;
-      cpp.enable = true;
+    };
   };
- }
+}
+
