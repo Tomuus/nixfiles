@@ -13,6 +13,8 @@
   time.timeZone = "Europe/Warsaw";
   
   home-manager.backupFileExtension = "bak";
+  
+  nixpkgs.config.allowUnfree = true;
 
   services.pipewire = {
     enable = true;
@@ -21,5 +23,5 @@
     jack.enable=true;
   };
 
-  system.stateVersion = "25.05";   
-}
+  system.stateVersion = "25.05";
+  }

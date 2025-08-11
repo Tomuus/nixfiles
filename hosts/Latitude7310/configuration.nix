@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     ./../common/user.nix
     ./../common/fonts.nix
+    ./packages.nix
   ];
   networking.hostName = "Latitude7310";
 }
