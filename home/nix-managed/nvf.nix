@@ -5,7 +5,7 @@
     theme = {
       enable = true;
       name = "catppuccin";
-      style = "frappe";
+      style = "mocha";
     };
     
     options = {

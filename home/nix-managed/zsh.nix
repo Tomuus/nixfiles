@@ -13,7 +13,7 @@
     };
     initContent = ''
       cowsay I use nixos btw
-      eval "$(oh-my-posh init zsh --config ~/.config/omp/catppuccin.json)"
+      eval "$(oh-my-posh init zsh --config ~/.config/omp/catppuccin_mocha.json)"
     '';
   };
 }
