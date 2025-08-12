@@ -1,7 +1,7 @@
 #zsh.nix
 #Zsh configuration
 
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   programs.zsh = {
@@ -10,6 +10,8 @@
       ll = "ls -l";
       gs = "git status";
       nxrs = "sudo nixos-rebuild switch --flake .";
+      nivm = "nvim";
+      nimv = "nvim"; #wonder why these 2 exits
     };
     initContent = ''
       cowsay I use nixos btw

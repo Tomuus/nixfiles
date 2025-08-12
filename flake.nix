@@ -16,6 +16,7 @@
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
+    mods = ./modules; #Just so i can import modules everywere i want wihout big paths
   in
   {
     packages.${system}.default = 
@@ -24,11 +25,9 @@
 	modules = [ ./home/nix-managed/nvf.nix ];
       }).neovim;
     nixosConfigurations.Latitude7310 = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
+      specialArgs = {inherit inputs mods;};
       modules = [
         ./hosts/Latitude7310/configuration.nix
-	./modules/de/hyprland.nix
-	./modules/dev/cpp.nix
         nvf.nixosModules.default
 	home-manager.nixosModules.home-manager {
 	  home-manager.useGlobalPkgs = true;

@@ -1,6 +1,6 @@
 #my user (tomus)
 
-{config, pkgs, ...}:
+{ pkgs, ...}:
 {
   programs.zsh.enable = true;
   users.users.tomus = {
@@ -8,7 +8,7 @@
     shell = pkgs.zsh;
     extraGroups = ["wheel"]; #Grants sudo
     packages = with pkgs; [
-      tree
+      tree #Added by default but got so useful I didn't remove it 
     ];
   };
 }
