@@ -1,11 +1,12 @@
 #Home manager config
 #./home/default.nix
 
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   imports = [
-    ./nix-managed/zsh.nix
+    ./nix-managed
+    ./configs
   ];
 
   home.username = "tomus";
@@ -13,8 +14,5 @@
 
   programs.home-manager.enable = true;
   home.stateVersion = "25.05";
-  
-  home.file.".config/hypr".source = ./configs/hypr;
-  home.file.".config/waybar".source = ./configs/waybar;
 }
 
