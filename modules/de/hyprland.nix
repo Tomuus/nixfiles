@@ -1,5 +1,5 @@
 #hyprland.nix
-{config, pkgs, ...}:
+{ pkgs, ... }:
 
 {
   programs.hyprland.enable = true;
@@ -11,5 +11,6 @@
     hyprlock
     bibata-cursors
     brightnessctl
+    hyprpaper
   ];
 }

@@ -1,6 +1,8 @@
-@define-color prim #FEE5E4;
-@define-color sec #0D2149;
-@define-color bcg #208AAE;
+@import "mocha.css";
+
+@define-color prim @rosewater    /*#FEE5E4*/; /* white */
+@define-color sec  @red    /*#0D2149*/; /* main backgound */
+@define-color bcg  @maroon    /*#208AAE*/; /* secondary background*/
 
 *
 {
