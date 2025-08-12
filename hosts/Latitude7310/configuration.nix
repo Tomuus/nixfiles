@@ -1,15 +1,14 @@
 #configuration.nix
 
-{ config, lib, pkgs, ... }:
+{ mods, ... }:
 
 {
   imports = [
-    ./../common/packages.nix
-    ./../common/system-properties.nix
     ./hardware-configuration.nix
-    ./../common/user.nix
-    ./../common/fonts.nix
     ./packages.nix
+    ./../common
+    "${mods}/de/hyprland.nix"
+    "${mods}/dev/cpp.nix"
   ];
   networking.hostName = "Latitude7310";
 }

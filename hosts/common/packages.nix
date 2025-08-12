@@ -1,12 +1,11 @@
 #packages.nix
 
-{ pkgs, nvf, ... }:
+{ pkgs, ... }:
 
 {
   programs = {
     zsh.enable = true;
     firefox.enable = true;
-#    nvf.enable = true;
   };
   environment.systemPackages = with pkgs; [
     wget
