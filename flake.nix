@@ -58,6 +58,23 @@
         }
       ];
     };
+    nixosConfigurations.Latitude5410 = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs mods;};
+      modules = [
+        ./hosts/Latitude5410/configuration.nix
+        nvf.nixosModules.default
+	home-manager.nixosModules.home-manager {
+	  home-manager.useGlobalPkgs = true;
+	  home-manager.useUserPackages = true;
+	  home-manager.users.tomus = import ./home;
+	}
+	{
+          environment.systemPackages = with pkgs; [
+            self.packages.${system}.default
+          ];
+        }
+      ];
+    };
 
   };
 }
