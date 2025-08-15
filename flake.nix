@@ -41,5 +41,23 @@
         }
       ];
     };
+    nixosConfigurations.Desktop3060ti = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs mods;};
+      modules = [
+        ./hosts/Desktop3060ti/configuration.nix
+        nvf.nixosModules.default
+	home-manager.nixosModules.home-manager {
+	  home-manager.useGlobalPkgs = true;
+	  home-manager.useUserPackages = true;
+	  home-manager.users.tomus = import ./home;
+	}
+	{
+          environment.systemPackages = with pkgs; [
+            self.packages.${system}.default
+          ];
+        }
+      ];
+    };
+
   };
 }

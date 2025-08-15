@@ -12,4 +12,7 @@
       wayland.enable = true;
     };
   };
+  environment.systemPackages = with pkgs; [
+    ghostty
+  ];
 }
