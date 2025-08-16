@@ -1,6 +1,6 @@
 #configuration.nix
 
-{ mods, pkgs, ... }:
+{ mods, ... }:
 
 {
   imports = [
@@ -9,10 +9,10 @@
     ./../common
     "${mods}/dev/cpp.nix"
     "${mods}/de/hyprland.nix"
-    "${mods}/de/plasma6.nix"
+    #"${mods}/de/plasma6.nix"
     "${mods}/steam.nix"
     "${mods}/minecraft.nix"
-    "${mods}/dm/ly.nix"
+    #"${mods}/dm/ly.nix"
   ];
   networking.hostName = "Latitude5410";
 
