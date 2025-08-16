@@ -12,6 +12,7 @@
     "${mods}/de/plasma6.nix"
     "${mods}/steam.nix"
     "${mods}/minecraft.nix"
+    "${mods}/dm/ly.nix"
   ];
   networking.hostName = "Latitude5410";
 
