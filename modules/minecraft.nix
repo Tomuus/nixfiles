@@ -1,8 +1,9 @@
 { pkgs, ... }:
 
 {
+  nixpkgs.config.allowBroken = true;
   environment.systemPackages = with pkgs; [
-    unzip
-    usbutils
+    minecraft
+    prismlauncher
   ];
 }
