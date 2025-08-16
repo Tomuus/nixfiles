@@ -22,10 +22,9 @@
         };
       };
     };
-                
+    lsp.enable = true;            
     autocomplete.nvim-cmp.enable = true;
     languages = {
-      enableLSP = true;
 
       clang.enable = true;
       nix.enable = true;
