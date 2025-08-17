@@ -111,7 +111,7 @@
         "max-length": 10
     },
     "custom/launcher":{
-        "format": " ",
+        "format": " ",
         "on-click": "rofi -show drun",
         "on-click-right": "killall rofi",
         "tooltip": false,
