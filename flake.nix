@@ -19,7 +19,7 @@
     mods = ./modules; #Just so i can import modules everywere i want wihout big paths
   in
   {
-    packages.${system}.default = 
+    packages.${system}.nvf = 
       (nvf.lib.neovimConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
 	modules = [ ./home/nix-managed/nvf.nix ];
@@ -36,7 +36,7 @@
 	}
 	{
           environment.systemPackages = with pkgs; [
-            self.packages.${system}.default
+            self.packages.${system}.nvf
           ];
         }
       ];
@@ -53,7 +53,7 @@
 	}
 	{
           environment.systemPackages = with pkgs; [
-            self.packages.${system}.default
+            self.packages.${system}.nvf
           ];
         }
       ];
@@ -70,7 +70,7 @@
 	}
 	{
           environment.systemPackages = with pkgs; [
-            self.packages.${system}.default
+            self.packages.${system}.nvf
           ];
         }
       ];
