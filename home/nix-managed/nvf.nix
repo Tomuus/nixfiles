@@ -29,6 +29,8 @@
       clang.enable = true;
       nix.enable = true;
     };
+
+    autopairs.nvim-autopairs.enable = true;
   };
 }
 
