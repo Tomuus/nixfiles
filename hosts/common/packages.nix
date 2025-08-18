@@ -12,7 +12,7 @@
     git
     oh-my-posh
     fastfetch
-    neofetch
+    #neofetch
     htop
     cowsay
     vim
