@@ -5,4 +5,6 @@
     unzip
     usbutils
   ];
+
+  services.power-profiles-daemon.enable = true;
 }

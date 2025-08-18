@@ -1,0 +1,126 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+    "display": {
+        "size": {
+            "maxPrefix": "MB",
+            "ndigits": 0,
+            "spaceBeforeUnit": "never"
+        },
+        "freq": {
+            "ndigits": 3,
+            "spaceBeforeUnit": "never"
+        }
+    },
+
+    "logo": {
+        "type": "builtin",
+        "source": "nixos",
+        "color": { "1": "#cba6f7", "2": "#f5c2e7" }
+    },
+
+    "modules": [
+        {
+            "type": "title",
+            "keyColor": "#ffffff",
+            "valueColor": "#ffffff"
+        },
+        "separator",
+        {
+            "type": "os",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "host",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "kernel",
+            "format": "{release}",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "uptime",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "packages",
+            "combined": true,
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "shell",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "display",
+            "compactType": "original",
+            "key": "Resolution",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "de",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "wm",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "wmtheme",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "theme",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "icons",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "terminal",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "terminalfont",
+            "format": "{/name}{-}{/}{name}{?size} {size}{?}",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "cpu",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "battery",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        {
+            "type": "memory",
+            "format": "{used} / {total}",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cba6f7"
+        },
+        "break",
+        {
+            "type": "colors"
+        }
+    ]
+}
+
