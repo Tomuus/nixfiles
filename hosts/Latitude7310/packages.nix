@@ -5,4 +5,5 @@
     twingate
   ];
   #services.twingate.enable = true;
+  nixpkgs.config.allow.unfree = true;
 }

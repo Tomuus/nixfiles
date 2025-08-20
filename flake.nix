@@ -10,9 +10,15 @@
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, ...} @ inputs:
+  outputs = { self, nixpkgs, home-manager, nvf, quickshell, spicetify-nix, ...} @ inputs:
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -62,6 +68,7 @@
       specialArgs = {inherit inputs mods;};
       modules = [
         ./hosts/Latitude5410/configuration.nix
+          inputs.spicetify-nix.nixosModules.default
         nvf.nixosModules.default
 	home-manager.nixosModules.home-manager {
 	  home-manager.useGlobalPkgs = true;
