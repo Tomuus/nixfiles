@@ -11,6 +11,9 @@
     options = {
       number = true;
       relativenumber = false;
+      shiftwidth = 2;          
+      tabstop = 2;        
+      softtabstop = 2;
     };
     filetree = {
      nvimTree = {
