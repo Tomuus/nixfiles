@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ ... }:
 
 {
   vim = {
@@ -31,6 +31,7 @@
 
       clang.enable = true;
       nix.enable = true;
+      rust.enable = true;
     };
 
     autopairs.nvim-autopairs.enable = true;
