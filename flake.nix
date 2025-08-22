@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixpkgs-unstable";
     home-manager.url = "github:nix-community/home-manager?ref=release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     
@@ -18,10 +19,11 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, quickshell, spicetify-nix, ...} @ inputs:
+  outputs = { self, nixpkgs, home-manager, nvf, quickshell, spicetify-nix, nixpkgs-unstable, ...} @ inputs:
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
+    unstbl = nixpkgs-unstable.legacyPackages.${system};
     mods = ./modules; #Just so i can import modules everywere i want wihout big paths
   in
   {
@@ -31,7 +33,7 @@
 	modules = [ ./home/nix-managed/nvf.nix ];
       }).neovim;
     nixosConfigurations.Latitude7310 = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs mods;};
+      specialArgs = {inherit inputs mods unstbl;};
       modules = [
         ./hosts/Latitude7310/configuration.nix
         nvf.nixosModules.default
@@ -48,7 +50,7 @@
       ];
     };
     nixosConfigurations.Desktop3060ti = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs mods;};
+      specialArgs = {inherit inputs mods unstbl;};
       modules = [
         ./hosts/Desktop3060ti/configuration.nix
         nvf.nixosModules.default
@@ -65,7 +67,7 @@
       ];
     };
     nixosConfigurations.Latitude5410 = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs mods;};
+      specialArgs = {inherit inputs mods unstbl;};
       modules = [
         ./hosts/Latitude5410/configuration.nix
           inputs.spicetify-nix.nixosModules.default

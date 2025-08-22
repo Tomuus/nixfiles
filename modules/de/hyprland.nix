@@ -1,8 +1,9 @@
 #hyprland.nix
-{ pkgs, ... }:
+{ pkgs, unstbl, ... }:
 
 {
   programs.hyprland.enable = true;
+  programs.hyprland.package = unstbl.hyprland;
   environment.systemPackages = with pkgs; [
     kitty
     waybar
