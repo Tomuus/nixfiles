@@ -14,6 +14,7 @@
     "${mods}/minecraft.nix"
     "${mods}/spotify.nix"
     "${mods}/bluetooth.nix"
+    "${mods}/dev/rust.nix"
   ];
   networking.hostName = "Latitude5410";
 
