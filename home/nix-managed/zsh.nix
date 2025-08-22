@@ -13,6 +13,11 @@
       nivm = "nvim";
       nimv = "nvim"; #wonder why these 2 exits
       neofetch = "fastfetch";
+      ga = "git add";
+      gc = "git commit";
+      gr = "git restore";
+      ndw = "sudo nmcli device wifi"; #Nah terminal is all you need for wifi and bt
+      gti = "git"; #Typo final boss
     };
     initContent = ''
       cowsay I use nixos btw
