@@ -1,5 +1,5 @@
 # desktop.nix
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   services = {
