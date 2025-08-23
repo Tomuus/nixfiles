@@ -9,4 +9,5 @@
   home.file.".config/kitty".source = ./kitty;
   home.file.".config/rofi".source = ./rofi;
   home.file.".config/fastfetch".source = ./fastfetch;
+  home.file.".config/omp".source = ./omp;
 }
