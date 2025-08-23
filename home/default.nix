@@ -8,7 +8,7 @@
     ./nix-managed
     ./configs
   ];
-
+  
   home.username = "tomus";
   home.homeDirectory = "/home/tomus";
 
