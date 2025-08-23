@@ -4,6 +4,7 @@
 {
   programs.zsh.enable = true;
   users.users.tomus = {
+    description = "Tomus";
     isNormalUser = true;
     shell = pkgs.zsh;
     extraGroups = ["wheel"]; #Grants sudo
@@ -11,4 +12,7 @@
       tree #Added by default but got so useful I didn't remove it 
     ];
   };
+  security.sudo.extraConfig = ''
+    Defaults:tomus passprompt="[sudo] password for Tomus:"
+  '';
 }

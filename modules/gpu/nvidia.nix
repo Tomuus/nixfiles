@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -12,7 +12,7 @@
     package =  config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
     config.boot.kernelPackages.nvidiaPackages.stable
   ];
 }

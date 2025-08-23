@@ -1,7 +1,7 @@
 #Home manager config
 #./home/default.nix
 
-{ config, ... }:
+{ ... }:
 
 {
   imports = [
