@@ -1,10 +1,10 @@
 #my user (tomus)
 
-{ pkgs, ...}:
+{ pkgs, userName, fullName, ...}:
 {
   programs.zsh.enable = true;
-  users.users.tomus = {
-    description = "Tomus";
+  users.users.${userName} = {
+    description = "${fullName}";
     isNormalUser = true;
     shell = pkgs.zsh;
     extraGroups = ["wheel"]; #Grants sudo
@@ -13,6 +13,6 @@
     ];
   };
   security.sudo.extraConfig = ''
-    Defaults:tomus passprompt="[sudo] password for Tomus:"
+    Defaults:${userName} passprompt="[sudo] password for ${fullName}:"
   '';
 }

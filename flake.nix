@@ -24,7 +24,9 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
     unstbl = nixpkgs-unstable.legacyPackages.${system};
-    mods = ./modules; # Just so i can import modules everywhere i want without big paths  
+    mods = ./modules; # Just so i can import modules everywhere i want without big paths 
+    userName = "tomus";
+    fullName = "Tomus";
   in
   {
     packages.${system}.nvf = 
@@ -35,11 +37,11 @@
 
     nixosConfigurations = {
       Latitude7310 = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs mods unstbl; };
+        specialArgs = { inherit inputs mods unstbl userName fullName; };
         modules = [
           ./hosts/Latitude7310/configuration.nix
           nvf.nixosModules.default
-          home-manager.nixosModules.home-manager { home-manager.users.tomus = import ./home; } #If it works DON'T TOUCH IT
+          home-manager.nixosModules.home-manager { home-manager.users.${userName} = import ./home { inherit userName fullName; }; } #If it works DON'T TOUCH IT
           {
             environment.systemPackages = [
               self.packages.${system}.nvf
@@ -49,11 +51,11 @@
       };
 
       Desktop3060ti = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs mods unstbl; };
+        specialArgs = { inherit inputs mods unstbl userName fullName; };
         modules = [
           ./hosts/Desktop3060ti/configuration.nix
           nvf.nixosModules.default
-          home-manager.nixosModules.home-manager { home-manager.users.tomus = import ./home; }
+          home-manager.nixosModules.home-manager { home-manager.users.${userName} = import ./home { inherit userName fullName; }; }
           {
             environment.systemPackages = [
               self.packages.${system}.nvf
@@ -63,12 +65,12 @@
       };
 
       Latitude5410 = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs mods unstbl; };
+        specialArgs = { inherit inputs mods unstbl userName fullName; };
         modules = [
           ./hosts/Latitude5410/configuration.nix
           inputs.spicetify-nix.nixosModules.default
           nvf.nixosModules.default
-          home-manager.nixosModules.home-manager { home-manager.users.tomus = import ./home; }
+          home-manager.nixosModules.home-manager { home-manager.users.${userName} = import ./home { inherit userName fullName; }; }
           {
             environment.systemPackages = [
               self.packages.${system}.nvf
