@@ -1,0 +1,3 @@
+[submodule "home/configs"]
+	path = home/configs
+	url = git@github.com:Tomuus/dotfiles
