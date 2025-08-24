@@ -1,7 +1,7 @@
 #Home manager config
 #./home/default.nix
 
-{ ... }:
+{ userName, ... }:
 
 {
   imports = [
@@ -9,8 +9,8 @@
     ./configs
   ];
   
-  home.username = "tomus";
-  home.homeDirectory = "/home/tomus";
+  home.username = userName;
+  home.homeDirectory = "/home/${userName}";
 
   programs.home-manager.enable = true;
   home.stateVersion = "25.05";
