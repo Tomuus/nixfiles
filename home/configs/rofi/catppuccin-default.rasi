@@ -33,10 +33,12 @@
 
 }
 element {
-    padding: 1px ;
+    margin-left: 20px;
+    padding: 3px ;
     cursor:  pointer;
-    spacing: 5px ;
+    spacing: 4px ;
     border:  0;
+    border-radius: 10px;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -90,6 +92,7 @@ window {
     padding:          5;
     background-color: @background;
     border:           1;
+    border-radius:    10px;
 }
 mainbox {
     padding: 0;
