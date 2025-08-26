@@ -15,6 +15,7 @@
     "${mods}/spotify.nix"
     "${mods}/bluetooth.nix"
     "${mods}/dev/rust.nix"
+    "${mods}/quickshell.nix"
   ];
   networking.hostName = "Latitude5410";
 
