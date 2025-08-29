@@ -7,5 +7,7 @@
     cdparanoia
     lame
     abcde
+    twingate
   ];
+  services.twingate.enable = true;
 }
