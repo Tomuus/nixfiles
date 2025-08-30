@@ -7,7 +7,7 @@
     description = "${fullName}";
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = ["wheel"]; #Grants sudo
+    extraGroups = ["wheel" "cdrom"]; #Grants sudo
     packages = with pkgs; [
       tree #Added by default but got so useful I didn't remove it 
     ];
