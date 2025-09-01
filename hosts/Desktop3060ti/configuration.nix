@@ -13,6 +13,7 @@
     "${mods}/minecraft.nix"
     "${mods}/gpu/nvidia.nix"
     "${mods}/dm/sddm.nix"
+    "${mods}/ripping.nix"
     ./packages.nix
   ];
   networking.hostName = "Desktop3060ti";
