@@ -8,5 +8,6 @@
   environment.systemPackages = with pkgs; [
     twingate
   ];
+  services.power-profiles-daemon.enable = true;
   #services.twingate.enable = true;
 }
