@@ -8,6 +8,7 @@
     hdparm
     twingate
     vlc
+    ntfs3g
   ];
   services.twingate.enable = true;
 }
