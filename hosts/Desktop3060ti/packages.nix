@@ -9,6 +9,7 @@
     twingate
     vlc
     ntfs3g
+    heroic
   ];
   services.twingate.enable = true;
 }
