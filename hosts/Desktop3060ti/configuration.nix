@@ -14,6 +14,7 @@
     "${mods}/gpu/nvidia.nix"
     "${mods}/dm/sddm.nix"
     "${mods}/ripping.nix"
+    "${mods}/steam.nix"
     ./packages.nix
   ];
   networking.hostName = "Desktop3060ti";
