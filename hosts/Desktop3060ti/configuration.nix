@@ -15,6 +15,7 @@
     "${mods}/dm/sddm.nix"
     "${mods}/ripping.nix"
     "${mods}/steam.nix"
+    "${mods}/dev/cpp.nix"
     ./packages.nix
   ];
   networking.hostName = "Desktop3060ti";
