@@ -10,6 +10,10 @@
     vlc
     ntfs3g
     heroic
+    lutris
+    zoom-us
+    clementine
+    sshfs
   ];
   services.twingate.enable = true;
 }
