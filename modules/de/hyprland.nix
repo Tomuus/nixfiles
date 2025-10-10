@@ -13,5 +13,7 @@
     bibata-cursors
     brightnessctl
     hyprpaper
+    lxqt.lxqt-policykit
+    kdePackages.dolphin
   ];
 }

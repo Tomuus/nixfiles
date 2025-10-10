@@ -9,10 +9,10 @@
     ./hardware-configuration.nix
     ./../common
     "${mods}/de/hyprland.nix"
-    "${mods}/de/plasma6.nix"
+#    "${mods}/de/plasma6.nix"
     "${mods}/minecraft.nix"
     "${mods}/gpu/nvidia.nix"
-    "${mods}/dm/sddm.nix"
+#    "${mods}/dm/sddm.nix"
     "${mods}/ripping.nix"
     "${mods}/steam.nix"
     "${mods}/dev/cpp.nix"
