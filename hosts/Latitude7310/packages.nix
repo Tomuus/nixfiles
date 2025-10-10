@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, unstbl, ... }:
 
 {
   services.udisks2.enable = true;
@@ -18,6 +18,8 @@
     psmisc
     cifs-utils
     libreoffice-qt6-fresh
+    unstbl.rpi-imager
+    qbittorrent
   ];
   services.power-profiles-daemon.enable = true;
   #services.twingate.enable = true;
