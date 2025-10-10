@@ -14,6 +14,8 @@
     zoom-us
     clementine
     sshfs
+    unzip
+    cifs-utils
   ];
   services.twingate.enable = true;
 }
