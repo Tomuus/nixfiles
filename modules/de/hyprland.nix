@@ -15,5 +15,6 @@
     hyprpaper
     lxqt.lxqt-policykit
     kdePackages.dolphin
+    hyprshot
   ];
 }

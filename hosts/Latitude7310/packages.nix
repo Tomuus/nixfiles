@@ -1,6 +1,8 @@
 { pkgs, lib, unstbl, ... }:
 
 {
+  security.tpm2.enable = true;
+
   services.udisks2.enable = true;
   security.polkit.enable = true;
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -20,7 +22,9 @@
     libreoffice-qt6-fresh
     unstbl.rpi-imager
     qbittorrent
+    nomacs-qt6
+    kdePackages.gwenview
   ];
   services.power-profiles-daemon.enable = true;
-  #services.twingate.enable = true;
+  services.twingate.enable = true;
 }
