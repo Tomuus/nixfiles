@@ -1,0 +1,413 @@
+@import "mocha.css";
+
+@define-color prim @rosewater    /*#FEE5E4*/; /* white */
+@define-color sec  @mauve    /*#0D2149*/; /* main backgound */
+@define-color bcg  @lavender    /*#208AAE*/; /* secondary background*/
+
+*
+{
+	border: none;
+	border-radius: 10;
+    font-family: "JetbrainsMono Nerd Font" ;
+	font-size: 15px;
+	min-height: 10px;
+}
+window#waybar {
+	background: transparent;
+}
+#network {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;
+}
+#keyboard-state{
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;    
+}
+#keyboard-state:hover{
+    color: @sec; 
+    background: @bcg;
+}
+#network:hover { 
+    color: @sec;
+    background: @bcg;
+}
+#custom-keybinds {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: @prim;
+    background: @sec;
+    transition: 0.3s;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+}
+#custom-keybinds:hover { 
+    background: @bcg;
+    color: @sec;
+}
+#cava{
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s; 
+}
+#cava:hover{
+    color: @sec;
+    background: @bcg;
+}
+#battery{
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s; 
+}
+#battery:hover{
+    color: @sec;
+    background: @bcg;
+}
+#backlight:hover{
+    color: @sec;
+    background: @bcg;
+}
+#backlight{
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s; 
+}
+
+
+#language{
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;
+}
+#language:hover{
+    color: @sec; 
+    background: @bcg; 
+}
+#pulseaudio {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    padding: 8px;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;
+}
+#pulseaudio:hover{ 
+    background: @bcg;
+    color: @sec;
+}
+#pulseaudio.muted {
+    color: @prim;
+    background: @sec; 
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;
+}
+#pulseaudio.muted:hover {
+    background: @bcg;
+    color: @sec; 
+
+}
+#clock {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;
+}
+#clock:hover {
+    color: @sec; 
+    background: @bcg;
+}
+#disk{
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;
+}
+#disk:hover{
+    color: @sec; 
+    background: @bcg;
+}
+#privacy{
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;
+}
+#idle_inhibitor{
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;
+}
+#idle_inhibitor.activated{
+    color: @prim;
+    border-color: @bcg;
+}
+#idle_inhibitor.activated:hover{
+    background: @bcg;
+    color: @sec;
+    border-color: @bcg;
+}
+#idle_inhibitor.deactivated{
+    color: @prim
+}
+#idle_inhibitor.deactivated:hover{
+    color: @sec; 
+    background: @bcg;
+}
+#memory {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;
+}
+#memory:hover { 
+    color: @sec; 
+    background: @bcg;
+
+}
+#cpu {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;
+}
+#cpu:hover {
+    color: @sec; 
+    background: @bcg;
+
+}
+#custom-launcher {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 17px;
+    padding-left: 10px;
+    padding-right: 5px;
+    border-radius: 10px;
+    transition: none;
+    color: @prim;
+    background: @sec;
+    transition: 0.3s;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+}
+#custom-launcher:hover { 
+    background: @bcg;
+    color: @sec;
+}
+#network.disconnected {
+    color: @prim;
+    background: @sec; 
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+}
+#network.disconnected:hover {
+    background: @bcg;
+    color: @sec; 
+}
+#custom-power {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-right: 17px;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;
+}
+#custom-power:hover {
+    background: @bcg;
+    color: @sec;
+    border-color: @bcg;
+
+}
+#workspaces {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-right: 4px;
+    background: @sec; 
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    color: @prim;
+    transition: 0.3s;
+}
+
+#workspaces button {
+    color: @prim;
+    transition: 0.3s;
+}
+#workspaces button:hover {
+    background: transparent;
+    color: transparent;
+    box-shadow: none;
+    text-shadow: none;
+}
+#tray{
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;
+}
+#tray menu{
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @sec; 
+    color: @prim;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: @bcg;
+    transition: 0.3s;
+}
