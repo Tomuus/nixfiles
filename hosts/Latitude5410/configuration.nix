@@ -8,7 +8,7 @@
     ./packages.nix
     ./../common
     "${mods}/dev/cpp.nix"
-    "${mods}/de/hyprland.nix"
+    "${mods}/de/hyprland"
     #"${mods}/de/plasma6.nix"
     "${mods}/steam.nix"
     "${mods}/minecraft.nix"

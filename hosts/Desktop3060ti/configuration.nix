@@ -8,7 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     ./../common
-    "${mods}/de/hyprland.nix"
+    "${mods}/de/hyprland"
 #    "${mods}/de/plasma6.nix"
     "${mods}/minecraft.nix"
     "${mods}/gpu/nvidia.nix"
