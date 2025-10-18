@@ -1,3 +1,6 @@
+#default.nix
+#Imports configs for hyprland catppuccin mocha theme
+
 { ... }:
 
 {

@@ -1,3 +1,5 @@
+#discord.nix
+
 { pkgs, lib, ... }:
 
 {

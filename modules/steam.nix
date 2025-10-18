@@ -1,3 +1,5 @@
+#steam.nix
+
 { pkgs, ... }:
 
 {

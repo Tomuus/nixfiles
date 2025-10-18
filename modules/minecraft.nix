@@ -1,3 +1,5 @@
+#minecraft.nix
+
 { pkgs, ... }:
 
 {
