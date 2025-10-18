@@ -1,9 +1,10 @@
 #hyprland.nix
-{ pkgs, unstbl, ... }:
+{ pkgs, unstbl, userName, ... }:
 
 {
   programs.hyprland.enable = true;
   programs.hyprland.package = unstbl.hyprland;
+  
   environment.systemPackages = with pkgs; [
     kitty
     waybar
@@ -17,4 +18,6 @@
     kdePackages.dolphin
     hyprshot
   ];
+
+  home-manager.users.${userName} = import ./catppuccin-mocha;
 }
