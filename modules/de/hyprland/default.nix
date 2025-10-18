@@ -1,4 +1,6 @@
-#hyprland.nix
+#default.nix
+#Used to be called hyprland.nix, renamed to default to make the import shorter
+
 { pkgs, unstbl, userName, ... }:
 
 {

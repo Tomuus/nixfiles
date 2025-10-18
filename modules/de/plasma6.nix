@@ -1,4 +1,5 @@
-# desktop.nix
+#plasma6.nix
+
 { pkgs, ... }:
 
 {
