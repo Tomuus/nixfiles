@@ -20,7 +20,7 @@
       gti = "git"; #Typo final boss
     };
     initContent = ''
-      cowsay I use nixos btw
+      shuf -n 1 .tips | cowsay 
       eval "$(oh-my-posh init zsh --config ~/.config/omp/catppuccin_mocha.json)"
     '';
   };
