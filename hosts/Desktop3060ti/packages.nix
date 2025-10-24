@@ -3,6 +3,8 @@
 {
   nixpkgs.config.allowUnfree = true;
 
+  services.udisks2.enable = true;
+
   environment.systemPackages = with pkgs; [
     smartmontools
     hdparm
@@ -16,6 +18,11 @@
     sshfs
     unzip
     cifs-utils
+    qbittorrent
+    python314
+    ddcutil
+    virtualbox
+    spotify
   ];
   services.twingate.enable = true;
 }
