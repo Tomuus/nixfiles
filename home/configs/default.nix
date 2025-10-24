@@ -6,4 +6,5 @@
 {
   home.file.".config/fastfetch".source = ./fastfetch;
   home.file.".config/omp".source = ./omp;
+  home.file.".tips".source = ./tips;
 }
