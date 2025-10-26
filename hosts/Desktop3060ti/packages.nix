@@ -23,6 +23,17 @@
     ddcutil
     virtualbox
     spotify
+    kdePackages.kio
+    kdePackages.kservice
+    shared-mime-info
+    kdePackages.gwenview
   ];
+  xdg.mime.enable = true;
+
+  xdg.menus.enable = true;
+  
+  environment.etc."xdg/menus/applications.menu".source =
+    "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+
   services.twingate.enable = true;
 }
