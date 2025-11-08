@@ -7,7 +7,6 @@
 
   environment.systemPackages = with pkgs; [
     smartmontools
-    hdparm
     twingate
     vlc
     ntfs3g
@@ -20,20 +19,22 @@
     cifs-utils
     qbittorrent
     python314
-    ddcutil
-    virtualbox
     spotify
     kdePackages.kio
+    kdePackages.kio-extras
+    kdePackages.kimageformats
     kdePackages.kservice
     shared-mime-info
     kdePackages.gwenview
+    kdePackages.baloo-widgets
+    kdePackages.baloo
+    kdePackages.kate
+    kdePackages.dolphin-plugins
   ];
   xdg.mime.enable = true;
 
   xdg.menus.enable = true;
   
-  environment.etc."xdg/menus/applications.menu".source =
-    "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
-
+  environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   services.twingate.enable = true;
 }
