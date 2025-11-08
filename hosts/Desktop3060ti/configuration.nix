@@ -17,6 +17,7 @@
     "${mods}/steam.nix"
     "${mods}/dev/cpp.nix"
     ./packages.nix
+#    ./../Latitude7310/packages.nix
   ];
   networking.hostName = "Desktop3060ti";
 }
