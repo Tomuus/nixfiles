@@ -17,9 +17,15 @@
     };
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
+    caelestiaShell = {
+      url = "github:caelestia-dots/shell";
+#      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, quickshell, spicetify-nix, nixpkgs-unstable, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, nvf, quickshell, spicetify-nix, nixpkgs-unstable, caelestiaShell, ... } @ inputs:
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};

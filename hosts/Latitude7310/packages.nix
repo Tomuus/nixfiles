@@ -1,4 +1,4 @@
-{ pkgs, lib, unstbl, ... }:
+{ pkgs, lib, unstbl, inputs, ... }:
 
 {
   security.tpm2.enable = true;
@@ -20,10 +20,11 @@
     psmisc
     cifs-utils
     libreoffice-qt6-fresh
-    unstbl.rpi-imager
+#    unstbl.rpi-imager
     qbittorrent
     nomacs-qt6
     kdePackages.gwenview
+    inputs.caelestiaShell.packages.${pkgs.system}.with-cli
   ];
   services.power-profiles-daemon.enable = true;
   services.twingate.enable = true;
