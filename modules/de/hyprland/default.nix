@@ -1,7 +1,7 @@
 #default.nix
 #Used to be called hyprland.nix, renamed to default to make the import shorter
 
-{ pkgs, unstbl, userName, ... }:
+{ pkgs, unstbl, userName, inputs, ... }:
 
 {
   programs.hyprland.enable = true;
@@ -19,7 +19,11 @@
     lxqt.lxqt-policykit
     kdePackages.dolphin
     hyprshot
+    inputs.caelestiaShell.packages.${pkgs.system}.with-cli
+    xdg-desktop-portal
+
   ];
+
 
   home-manager.users.${userName} = import ./catppuccin-mocha;
 }
