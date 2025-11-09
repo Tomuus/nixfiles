@@ -11,7 +11,6 @@
   nixpkgs.config.allow.unfree = true;
   environment.systemPackages = with pkgs; [
     twingate
-    kdePackages.dolphin
     unzip
     vlc
     flac
@@ -24,8 +23,9 @@
     qbittorrent
     nomacs-qt6
     kdePackages.gwenview
-    inputs.caelestiaShell.packages.${pkgs.system}.with-cli
   ];
+
+  services.upower.enable = true;
   services.power-profiles-daemon.enable = true;
   services.twingate.enable = true;
 }
