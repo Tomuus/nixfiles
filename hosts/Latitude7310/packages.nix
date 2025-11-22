@@ -23,7 +23,13 @@
     qbittorrent
     nomacs-qt6
     kdePackages.gwenview
+    kdePackages.baloo-widgets
+    kdePackages.baloo
+    kdePackages.dolphin-plugins
   ];
+
+   environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+
 
   services.upower.enable = true;
   services.power-profiles-daemon.enable = true;
