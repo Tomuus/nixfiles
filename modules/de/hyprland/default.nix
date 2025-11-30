@@ -5,7 +5,7 @@
 
 {
   programs.hyprland.enable = true;
-  programs.hyprland.package = unstbl.hyprland;
+  programs.hyprland.package = pkgs.hyprland;
   
   environment.systemPackages = with pkgs; [
     kitty
