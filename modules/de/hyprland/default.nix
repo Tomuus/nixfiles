@@ -10,7 +10,7 @@
   environment.systemPackages = with pkgs; [
     kitty
     waybar
-    rofi-wayland
+    rofi
     pulseaudio
     hyprlock
     bibata-cursors
