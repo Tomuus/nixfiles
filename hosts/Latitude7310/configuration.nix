@@ -11,7 +11,7 @@
 #    ./tata.nix
     "${mods}/dev/cpp.nix"
     "${mods}/de/hyprland"
-#    "${mods}/de/plasma6.nix"
+    "${mods}/bluetooth.nix"
   ];
   networking.hostName = "Latitude7310";
 }

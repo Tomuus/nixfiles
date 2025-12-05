@@ -26,6 +26,8 @@
     kdePackages.baloo-widgets
     kdePackages.baloo
     kdePackages.dolphin-plugins
+    kdePackages.kwallet
+        pkgs.kdePackages.kio-extras
   ];
 
    environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
