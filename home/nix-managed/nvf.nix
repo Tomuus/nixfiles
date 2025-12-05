@@ -29,7 +29,7 @@
     autocomplete.nvim-cmp.enable = true;
     languages = {
 
-      clang.enable = true;
+#      clang.enable = true;
       nix.enable = true;
       rust.enable = true;
     };
