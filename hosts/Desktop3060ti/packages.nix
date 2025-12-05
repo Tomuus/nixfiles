@@ -31,15 +31,17 @@
     kdePackages.kate
     kdePackages.dolphin-plugins
     inputs.caelestiaShell.packages.${pkgs.system}.with-cli
+    roboto
+    roboto-mono
   ];
   xdg.mime.enable = true;
 
   xdg.menus.enable = true;
  
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "tomus" ];
-  virtualisation.virtualbox.host.enableExtensionPack = true;
-  virtualisation.virtualbox.guest.enable = true;
+ # virtualisation.virtualbox.host.enable = true;
+ # users.extraGroups.vboxusers.members = [ "tomus" ];
+ # virtualisation.virtualbox.host.enableExtensionPack = true;
+ # virtualisation.virtualbox.guest.enable = true;
 
   environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   services.twingate.enable = true;
