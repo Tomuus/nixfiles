@@ -5,12 +5,14 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./apple-silicon-support
 #    ./packages.nix
 #    ./cal.nix
     ./../common
 #    ./tata.nix
-#    "${mods}/dev/cpp.nix"
-#    "${mods}/de/hyprland"
+    "${mods}/dm/sddm.nix"
+    "${mods}/de/plasma6.nix"
+    "${mods}/de/hyprland"
 #    "${mods}/bluetooth.nix"
   ];
   networking.hostName = "Makbuk";
@@ -19,6 +21,7 @@
     enable = true;
     settings.General.EndableNetworkConfiguration = true;
   };
+  nixpkgs.config.allowUnsupportedSystem = true;
 
   hardware.asahi.peripheralFirmwareDirectory = ./firmware;
 }
