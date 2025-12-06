@@ -84,6 +84,21 @@
           }
         ];
       };
+
+      Makbuk = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs mods unstbl userName fullName; };
+        modules = [
+          ./hosts/Makbuk.configuration.nix
+          #nvf.nixosModules.default
+          home-manager.nixosModules.home-manager { home-manager.users.${userName} = import ./home { inherit userName fullName; }; } #If it works DON'T TOUCH IT
+          {
+            #environment.systemPackages = [
+            #  self.packages.${system}.nvf
+            #];
+          }
+        ];
+      };
+
     };
   };
 }
