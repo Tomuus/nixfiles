@@ -5,7 +5,7 @@
 {
   
   imports = [
-    ./discord.nix
+#    ./discord.nix
   ];
 
   environment.systemPackages = with pkgs; [
