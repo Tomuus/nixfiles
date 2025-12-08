@@ -11,10 +11,14 @@
     ./../common
 #    ./tata.nix
     "${mods}/dm/sddm.nix"
-    "${mods}/de/hyprland"
-    "${mods}/de/plasma6.nix"
     "${mods}/minecraft.nix"
+    "${mods}/de/hyprland"
+    "${mods}/dev/cpp.nix"
+    "${mods}/de/cosmic.nix"
+    "${mods}/de/plasma6.nix"
+    "${mods}/neovim"
     "${mods}/aarch.nix"
+    "${mods}/tailscale.nix"
 #    "${mods}/bluetooth.nix"
   ];
   networking.hostName = "Makbuk";
