@@ -10,12 +10,12 @@
 #    ./cal.nix
     ./../common
 #    ./tata.nix
-    "${mods}/dm/sddm.nix"
+    "${mods}/sddm.nix"
     "${mods}/minecraft.nix"
     "${mods}/hyprland/new"
-    "${mods}/dev/cpp.nix"
-    "${mods}/de/cosmic.nix"
-    "${mods}/de/plasma6.nix"
+    "${mods}/cpp.nix"
+    "${mods}/cosmic.nix"
+    "${mods}/plasma6.nix"
     "${mods}/neovim"
     "${mods}/aarch.nix"
     "${mods}/tailscale.nix"
