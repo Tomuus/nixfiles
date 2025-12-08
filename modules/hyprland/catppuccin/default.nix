@@ -19,7 +19,7 @@
     lxqt.lxqt-policykit
     kdePackages.dolphin
     hyprshot
-#    inputs.caelestiaShell.packages.${pkgs.system}.with-cli
+    inputs.caelestiaShell.packages.${pkgs.system}.with-cli
     xdg-desktop-portal
 
   ];
