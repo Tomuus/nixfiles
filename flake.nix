@@ -28,7 +28,7 @@
   outputs = { self, nixpkgs, home-manager, nvf, quickshell, spicetify-nix, nixpkgs-unstable, caelestiaShell, ... } @ inputs:
   let
 #    pkgs = nixpkgs.legacyPackages.${system};
-#    unstbl = nixpkgs-unstable.legacyPackages.${system};
+    unstbl = nixpkgs-unstable;
     mods = ./modules; # Just so i can import modules everywhere i want without big paths 
     userName = "tomus";
     fullName = "Tomus";
@@ -89,7 +89,7 @@
 
       Makbuk = nixpkgs.lib.nixosSystem {
     system = "aarch64-linux";
-        specialArgs = { inherit inputs mods userName fullName; };
+        specialArgs = { inherit unstbl inputs mods userName fullName; };
         modules = [
           ./hosts/Makbuk/configuration.nix
           #nvf.nixosModules.default
