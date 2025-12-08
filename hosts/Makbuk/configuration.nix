@@ -12,7 +12,7 @@
 #    ./tata.nix
     "${mods}/dm/sddm.nix"
     "${mods}/minecraft.nix"
-    "${mods}/de/hyprland"
+    "${mods}/hyprland/new"
     "${mods}/dev/cpp.nix"
     "${mods}/de/cosmic.nix"
     "${mods}/de/plasma6.nix"
@@ -28,6 +28,6 @@
     settings.General.EndableNetworkConfiguration = true;
   };
   nixpkgs.config.allowUnsupportedSystem = true;
-  boot.kernelParams = [ "hid_apple.fnmode=2" ];
+  boot.kernelParams = [ "hid_apple.fnmode=2" "apple_dcp.show_notch=1" ];
   hardware.asahi.peripheralFirmwareDirectory = ./firmware;
 }
