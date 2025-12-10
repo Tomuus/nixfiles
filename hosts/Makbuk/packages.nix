@@ -1,8 +1,12 @@
 { pkgs, ... }:
 
 {
+	nixpkgs.config.allowUnsupportedSystem = true;
+
   environment.systemPackages = with pkgs; [
-#    lutris
 		apfs-fuse
+		steam
+		qemu
+		edk2
   ];
 }

@@ -28,6 +28,6 @@
     settings.General.EndableNetworkConfiguration = true;
   };
   nixpkgs.config.allowUnsupportedSystem = true;
-  boot.kernelParams = [ "hid_apple.fnmode=2" "apple_dcp.show_notch=1" ];
+  boot.kernelParams = [ "hid_apple.fnmode=2" "apple_dcp.show_notch=1" "hid_apple.swap_opt_cmd=2" ];
   hardware.asahi.peripheralFirmwareDirectory = ./firmware;
 }
