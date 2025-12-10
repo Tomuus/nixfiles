@@ -1,5 +1,15 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
 	programs.hyprland.enable = true;
+
+	environment.systemPackages = with pkgs;
+	[
+		kitty
+		waybar 
+		rofi
+		hyprlock
+		quickshell
+		brightnessctl
+	];
 }
