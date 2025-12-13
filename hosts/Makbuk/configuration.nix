@@ -3,6 +3,8 @@
 { mods, ... }:
 
 {
+	boot.binfmt.emulatedSystems = [ "i686-linux" ];
+
   imports = [
     ./hardware-configuration.nix
     ./apple-silicon-support
@@ -10,12 +12,12 @@
 #    ./cal.nix
     ./../common
 #    ./tata.nix
-    "${mods}/sddm.nix"
+#    "${mods}/sddm.nix"
     "${mods}/minecraft.nix"
     "${mods}/hyprland/new"
     "${mods}/cpp.nix"
-    "${mods}/cosmic.nix"
-    "${mods}/plasma6.nix"
+#    "${mods}/cosmic.nix"
+#    "${mods}/plasma6.nix"
     "${mods}/neovim"
     "${mods}/aarch.nix"
     "${mods}/tailscale.nix"
