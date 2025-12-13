@@ -21,7 +21,9 @@
     };
     initContent = ''
       shuf -n 1 ~/.tips | cowsay 
-      eval "$(oh-my-posh init zsh --config ~/.config/omp/catppuccin_mocha.json)"
+      #eval "$(oh-my-posh init zsh --config ~/.config/omp/catppuccin_mocha.json)"
     '';
   };
+
+  home.file.".tips".source = ./tips;
 }

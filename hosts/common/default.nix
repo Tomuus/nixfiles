@@ -1,4 +1,4 @@
-{ ... }:
+{ userName, ... }:
 
 {
   imports = [ 
@@ -7,4 +7,6 @@
     ./system-properties.nix
     ./user.nix
   ];
+
+	home-manager.users.${userName} = import ./zsh.nix;
 }

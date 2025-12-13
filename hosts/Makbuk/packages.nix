@@ -5,8 +5,13 @@
 
   environment.systemPackages = with pkgs; [
 		apfs-fuse
-		steam
+#		steam
 		qemu
 		edk2
+		retroarch-full
+		asahi-audio
+		spotify-qt
   ];
+
+#	services.spotifyd.enable = true;
 }

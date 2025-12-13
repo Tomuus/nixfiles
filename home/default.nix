@@ -5,7 +5,7 @@
 
 {
   imports = [
-    ./nix-managed
+#    ./nix-managed
     ./configs
   ];
   
