@@ -1,7 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, userName, ... }:
 
 {
 	programs.hyprland.enable = true;
+	services.udisks2.enable = true;
 
 	environment.systemPackages = with pkgs;
 	[
@@ -21,5 +22,10 @@
     kdePackages.baloo-widgets
     kdePackages.baloo
 		kdePackages.kio-extras
+		oh-my-posh
+		hyprmon
+		lxqt.lxqt-policykit
 	];
+
+	home-manager.users.${userName} = import ./config;
 }
