@@ -8,6 +8,7 @@
   programs.hyprland.package = pkgs.hyprland;
   
   environment.systemPackages = with pkgs; [
+		oh-my-posh
     kitty
     waybar
     rofi
