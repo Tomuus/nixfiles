@@ -10,7 +10,6 @@
   environment.systemPackages = with pkgs; [
     wget
     git
-    oh-my-posh
     fastfetch
     #neofetch
     htop

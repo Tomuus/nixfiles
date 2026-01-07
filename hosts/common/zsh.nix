@@ -4,7 +4,7 @@
 { ... }:
 
 {
-  programs.zsh = {
+  programs.fish = {
     enable = true;
     shellAliases = {
       ll = "ls -l";
@@ -19,9 +19,9 @@
       ndw = "sudo nmcli device wifi"; #Nah terminal is all you need for wifi and bt
       gti = "git"; #Typo final boss
     };
-    initContent = ''
+    shellInit = ''
       shuf -n 1 ~/.tips | cowsay 
-      #eval "$(oh-my-posh init zsh --config ~/.config/omp/catppuccin_mocha.json)"
+			oh-my-posh init fish -c ~/.config/omp/catppuccin_mocha.json | source
     '';
   };
 
