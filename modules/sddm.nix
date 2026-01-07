@@ -1,9 +1,33 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    sddm-astronaut
+  ];
+
   services.displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-    };
+    theme = "sddm-astronaut-theme";
+    extraPackages = [ pkgs.sddm-astronaut ];
+  	wayland.enable = true;
+		enable = true;
+	};
+
+	environment.etc."sddm/themes/astronaut/theme.conf.user".text = ''
+		[SddmGreeterTheme]
+		Name=sddm-astronaut-theme
+		Description=sddm-astronaut-theme
+		Author=keyitdev
+		Website=https://github.com/Keyitdev/sddm-astronaut-theme
+		License=GPL-3.0-or-later
+		Type=sddm-theme
+		Version=1.3 
+		ConfigFile=Themes/pixel_sakura.conf
+		Screenshot=Previews/astronaut.png
+		MainScript=Main.qml
+		TranslationsDirectory=translations
+		Theme-Id=sddm-astronaut-theme
+		Theme-API=2.0
+		QtVersion=6
+	'';
 }
 
