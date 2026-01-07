@@ -6,12 +6,14 @@
 	programs.neovim = {
 		enable = true;
 
-# Tell Neovim to use plugins from nixpkgs
 		plugins = with pkgs.vimPlugins; [
-			nvim-cmp
+				nvim-cmp
 				cmp-nvim-lsp
 				nvim-autopairs
-				#catppuccin
+				catppuccin-nvim
+				nvim-treesitter
+				lualine-nvim
+				nvim-tree-lua
 		];
 	};
 
