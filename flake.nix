@@ -29,6 +29,7 @@
         specialArgs = { inherit inputs mods userName fullName; };
         modules = [
           ./hosts/Desktop3060ti/configuration.nix
+					./common
           home-manager.nixosModules.home-manager 
 					];
       };
@@ -38,6 +39,7 @@
         specialArgs = { inherit unstbl inputs mods userName fullName; };
         modules = [
           ./hosts/Makbuk/configuration.nix
+					./common
           home-manager.nixosModules.home-manager 
 					];
       };

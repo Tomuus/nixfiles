@@ -12,7 +12,6 @@
     ./hardware-configuration.nix
     ./apple-silicon-support
     ./packages.nix
-    ./../common
 #    "${mods}/sddm.nix"
     "${mods}/minecraft.nix"
     "${mods}/hyprland/new"
