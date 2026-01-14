@@ -4,11 +4,10 @@
 { userName, ... }:
 
 {
-  imports = [
-#    ./nix-managed
-    ./configs
-  ];
-  
+	imports = [
+		./zsh.nix
+	];
+
   home.username = userName;
   home.homeDirectory = "/home/${userName}";
 

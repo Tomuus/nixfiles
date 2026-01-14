@@ -1,4 +1,4 @@
-{ userName, ... }:
+{ userName, fullName, ... }:
 
 {
   imports = [ 
@@ -8,5 +8,5 @@
     ./user.nix
   ];
 
-	home-manager.users.${userName} = import ./zsh.nix;
+	home-manager.users.${userName} = import ./hm.nix { inherit userName fullName; };
 }

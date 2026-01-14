@@ -93,7 +93,7 @@
         modules = [
           ./hosts/Makbuk/configuration.nix
           #nvf.nixosModules.default
-          home-manager.nixosModules.home-manager { home-manager.users.${userName} = import ./home { inherit userName fullName; }; } #If it works DON'T TOUCH IT
+          home-manager.nixosModules.home-manager #If it works DON'T TOUCH IT
           {
             #environment.systemPackages = [
             #  self.packages.${system}.nvf
