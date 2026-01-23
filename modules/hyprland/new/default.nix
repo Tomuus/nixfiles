@@ -30,6 +30,7 @@
 		xdg-desktop-portal-hyprland
 		kdePackages.gwenview
 		kdePackages.plasma-integration
+		kdePackages.ark
 		shared-mime-info
 		xdg-utils
 		desktop-file-utils
