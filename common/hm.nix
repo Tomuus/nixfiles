@@ -5,7 +5,7 @@
 
 {
 	imports = [
-		./zsh.nix
+		./fish.nix
 	];
 
   home.username = userName;

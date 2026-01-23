@@ -1,5 +1,4 @@
-#zsh.nix
-#Zsh configuration
+#Zsh configuration (imported in ./hm.nix)
 
 { ... }:
 
