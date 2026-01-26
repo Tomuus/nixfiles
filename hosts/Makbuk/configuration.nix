@@ -19,8 +19,9 @@
     "${mods}/cpp.nix"
     "${mods}/rust.nix"
 #    "${mods}/plasma6.nix"
-    "${mods}/neovim"
     "${mods}/aarch.nix"
+    "${mods}/neovim"
+    "${mods}/ipon.nix"
     "${mods}/tailscale.nix"
     "${mods}/bluetooth.nix"
   ];

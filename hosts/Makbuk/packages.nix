@@ -9,21 +9,16 @@
 		apfs-fuse
 		qemu
 		edk2
-		retroarch-full
+		retroarch
 		asahi-audio
 		spotify-qt
 		superTuxKart
 		vlc
-		ifuse
-		libimobiledevice
 		usbutils
-		kdePackages.ark
-		squashfuse
-		squashfsTools
 #		steam
 		gnumake
 		gperf
-
+		libreoffice-fresh
   ];
 
 	services.usbmuxd.enable = true;
