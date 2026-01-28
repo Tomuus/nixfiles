@@ -19,6 +19,7 @@
 		gnumake
 		gperf
 		libreoffice-fresh
+		rpcs3
   ];
 
 	services.usbmuxd.enable = true;
