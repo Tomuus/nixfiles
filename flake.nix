@@ -23,8 +23,11 @@
 		userName = "tomus";
 		fullName = "Tomus";
 	in
-		flake-parts.lib.mkFlake { inherit inputs; } {
-			flake = {
+		flake-parts.lib.mkFlake { inherit inputs; specialArgs = { inherit unstbl mods userName fullName; }; } {
+			imports = [
+				./hosts/Makbuk/configuration.nix
+			];
+			/*flake = {
 				nixosConfigurations = {
 					Desktop3060ti = nixpkgs.lib.nixosSystem {
 						system = "x86_64-linux";
@@ -46,7 +49,7 @@
 						];
 					};
 				};
-			};
+			};*/
 			systems = [ "x86_64-linux" "aarch64-linux" ];
 		};
 }

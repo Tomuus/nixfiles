@@ -1,9 +1,16 @@
-#configuration.nix
-
-{ mods, ... }:
+{ inputs, self, mods, userName, fullName, unstbl, ... }:
 
 {
-	programs.fuse.enable = true;
+	flake.nixosConfigurations.Makbuk = inputs.nixpkgs.lib.nixosSystem {
+		specialArgs = { inherit mods userName fullName unstbl; };
+		modules = [
+			self.nixosModules.MacModule
+			inputs.home-manager.nixosModules.home-manager
+		];
+	};
+
+	flake.nixosModules.MacModule = { pkgs, mods, ... }: {
+		programs.fuse.enable = true;
 
 	boot.binfmt.emulatedSystems = [ "i686-linux" "x86_64-linux" ];
 	boot.binfmt.addEmulatedSystemsToNixSandbox = true;
@@ -12,6 +19,7 @@
     ./hardware-configuration.nix
     ./apple-silicon-support
     ./packages.nix
+		../../common
 #    "${mods}/sddm.nix"
     "${mods}/minecraft.nix"
     "${mods}/hyprland/new"
@@ -37,4 +45,6 @@
 	nixpkgs.config.allowUnsupportedSystem = true;
   boot.kernelParams = [ "hid_apple.fnmode=2" "appledrm.show_notch=1" "hid_apple.swap_opt_cmd=2" ];
   hardware.asahi.peripheralFirmwareDirectory = ./firmware;
+
+	};
 }
