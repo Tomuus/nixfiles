@@ -5,6 +5,7 @@
 		specialArgs = { inherit mods userName fullName unstbl; };
 		modules = [
 			self.nixosModules.MacModule
+			self.nixosModules.aarch
 			inputs.home-manager.nixosModules.home-manager
 		];
 	};
@@ -27,7 +28,7 @@
     "${mods}/cpp.nix"
     "${mods}/rust.nix"
 #    "${mods}/plasma6.nix"
-    "${mods}/aarch.nix"
+#    "${mods}/aarch.nix"
     "${mods}/neovim"
     "${mods}/ipon.nix"
     "${mods}/tailscale.nix"
