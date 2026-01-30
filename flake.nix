@@ -26,6 +26,7 @@
 		flake-parts.lib.mkFlake { inherit inputs; specialArgs = { inherit unstbl mods userName fullName; }; } {
 			imports = [
 				./hosts/Makbuk/configuration.nix
+				./hosts/Desktop3060ti/configuration.nix
 			];
 			/*flake = {
 				nixosConfigurations = {

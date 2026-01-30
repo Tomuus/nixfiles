@@ -1,22 +1,28 @@
-#configuration.nix
-
-{ mods, ... }:
+{ inputs, self, mods, userName, fullName, unstbl, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
+	flake.nixosConfigurations.Desktop3060ti = inputs.nixpkgs.lib.nixosSystem {
+		specialArgs = { inherit inputs mods userName fullName unstbl; };
+		modules = [
+			self.nixosModules.desktopModule
+			inputs.home-manager.nixosModules.home-manager
+		];
+	};
 
-  imports = [
-    ./hardware-configuration.nix
-    "${mods}/de/hyprland"
-#    "${mods}/de/plasma6.nix"
-    "${mods}/minecraft.nix"
-    "${mods}/gpu/nvidia.nix"
-#    "${mods}/dm/sddm.nix"
-    "${mods}/ripping.nix"
-    "${mods}/steam.nix"
-    "${mods}/dev/cpp.nix"
-    ./packages.nix
-#    ./../Latitude7310/packages.nix
-  ];
-  networking.hostName = "Desktop3060ti";
+	flake.nixosModules.desktopModule = { pkgs, mods, ... }: {
+		nixpkgs.config.allowUnfree = true;
+
+  	imports = [
+			../../common
+    	./hardware-configuration.nix
+	    "${mods}/hyprland/catppuccin"
+    	"${mods}/minecraft.nix"
+    	"${mods}/nvidia.nix"
+  	  "${mods}/ripping.nix"
+	    "${mods}/steam.nix"
+    	"${mods}/cpp.nix"
+  	  ./packages.nix
+  	];
+  	networking.hostName = "Desktop3060ti";
+	};
 }
