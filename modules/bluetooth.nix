@@ -1,11 +1,14 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-  hardware.bluetooth.enable = true;
+	flake.nixosModules.bluetooth = { pkgs, ... }:
+	{
+		hardware.bluetooth.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    bluez
-    bluez-tools
-		blueman
-  ];
+		environment.systemPackages = with pkgs; [
+			bluez
+				bluez-tools
+				blueman
+		];
+	};
 }

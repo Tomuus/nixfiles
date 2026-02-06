@@ -5,8 +5,9 @@
 		specialArgs = { inherit mods userName fullName unstbl; };
 		modules = [
 			self.nixosModules.MacModule
-			self.nixosModules.aarch
 			inputs.home-manager.nixosModules.home-manager
+			self.nixosModules.aarch
+			self.nixosModules.bluetooth
 		];
 	};
 
@@ -32,7 +33,6 @@
     "${mods}/neovim"
     "${mods}/ipon.nix"
     "${mods}/tailscale.nix"
-    "${mods}/bluetooth.nix"
   ];
   networking.hostName = "Makbuk";
 

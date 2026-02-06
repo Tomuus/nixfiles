@@ -27,6 +27,8 @@
 			imports = [
 				./hosts/Makbuk/configuration.nix
 				./hosts/Desktop3060ti/configuration.nix
+				./modules/aarch.nix
+				./modules/bluetooth.nix
 			];
 			/*flake = {
 				nixosConfigurations = {
